@@ -112,9 +112,10 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onSelectForConsultation })
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 filter contrast-105"
                   onError={(e) => {
-                    // Fallback to stylized dark container if CDN is blocked
-                    const target = e.currentTarget;
-                    target.style.display = 'none';
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (target.src.includes('./images/')) {
+                      target.src = target.src.replace('./images/', '/images/');
+                    }
                   }}
                 />
 
@@ -225,6 +226,12 @@ export const Portfolio: React.FC<PortfolioProps> = ({ onSelectForConsultation })
                 alt={activeModalItem.title}
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-contain max-h-[75vh]"
+                onError={(e) => {
+                  const target = e.currentTarget as HTMLImageElement;
+                  if (target.src.includes('./images/')) {
+                    target.src = target.src.replace('./images/', '/images/');
+                  }
+                }}
               />
 
               {/* Prev / Next Buttons */}

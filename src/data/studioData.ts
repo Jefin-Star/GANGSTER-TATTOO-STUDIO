@@ -34,7 +34,7 @@ export const STUDIO_CONFIG: StudioInfo = {
   googleMapsEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.1526762385806!2d76.6068212!3d8.8860376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05fd228286980f%3A0x40e9126d80368a17!2sGANGSTER%20TATTOO%20STUDIO!5e1!3m2!1sen!2sin!4v1794045396398!5m2!1sen!2sin',
   
   // Official Studio Logo / Crest Asset provided by the user
-  logoPath: '/assets/aistudio/4eeff132-25b3-4eba-a0b2-28ffb62d2a4d_4eab42c1.jpg'
+  logoPath: './images/4eeff132-25b3-4eba-a0b2-28ffb62d2a4d_4eab42c1.jpg'
 };
 
 export const HYGIENE_STANDARDS = [

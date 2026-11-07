@@ -22,6 +22,12 @@ export const Footer: React.FC = () => {
                   src={STUDIO_CONFIG.logoPath}
                   alt="Gangster Tattoo Studio Insignia"
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (target.src.includes('./images/')) {
+                      target.src = target.src.replace('./images/', '/images/');
+                    }
+                  }}
                 />
               </div>
               <div>

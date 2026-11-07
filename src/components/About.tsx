@@ -81,6 +81,12 @@ export const About: React.FC = () => {
                   src={STUDIO_CONFIG.logoPath}
                   alt={STUDIO_CONFIG.founderName}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.currentTarget as HTMLImageElement;
+                    if (target.src.includes('./images/')) {
+                      target.src = target.src.replace('./images/', '/images/');
+                    }
+                  }}
                 />
               </div>
               <div>

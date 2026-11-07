@@ -2,5 +2,7 @@
   "name": "GANGSTER TATTOO STUDIO",
   "description": "Premium custom tattoo studio by Rony A with 8+ years experience. Custom tattoo artistry starting from ₹500 in Kollam, Kerala.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

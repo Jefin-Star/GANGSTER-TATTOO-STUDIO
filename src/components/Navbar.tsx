@@ -47,8 +47,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenBooking }) => {
                 alt="Gangster Tattoo Studio Insignia"
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  // Fallback to stylized emblem if path differs
-                  (e.target as HTMLElement).style.display = 'none';
+                  const target = e.currentTarget as HTMLImageElement;
+                  if (target.src.includes('./images/')) {
+                    target.src = target.src.replace('./images/', '/images/');
+                  }
                 }}
               />
             </div>

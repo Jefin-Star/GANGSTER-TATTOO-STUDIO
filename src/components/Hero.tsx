@@ -125,9 +125,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenBooking }) => {
                     className="w-full h-full object-contain filter contrast-105"
                     referrerPolicy="no-referrer"
                     onError={(e) => {
-                      // Fallback visual representation if path changes
                       const target = e.currentTarget as HTMLImageElement;
-                      target.src = '/public' + STUDIO_CONFIG.logoPath;
+                      if (!target.src.includes('logo.jpg')) {
+                        target.src = './images/logo.jpg';
+                      }
                     }}
                   />
                   <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/80 via-transparent to-black/20" />
